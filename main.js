@@ -21,17 +21,25 @@ const futureHeaderH1 = futureHeader.childNodes[1];
 ///Custom cursor Variables
 const cursor = document.querySelector(".cursor")
 
+
+
+
+
+
+
+
 //CODE ===========================================================================================================
 typeWriter();
 
 
 window.addEventListener("scroll", function(){
-  if(window.scrollY <= 66){
+  console.log(((window.innerWidth - 5)/window.innerWidth*100))
+  if(scrollY <= window.innerHeight*(43/941)){
+    futureHeader.style.top = "0px";
     futureHeaderWiden();
   }else{
-    futureHeader.style.width = "97.5%";
-    futureHeader.style.top = window.scrollY-66 + "px";
-    //futureHeaderH1.style.top = "-50px";
+    futureHeader.style.width = ((window.innerWidth - 3)/window.innerWidth*100) + "%";
+    futureHeader.style.top = window.scrollY - 43 + "px";
   }
 });
 
@@ -95,6 +103,6 @@ function typeDeleter(){
   }
 }
 
-function futureHeaderWiden(){ //66 à 100%
-  futureHeader.style.width = 80+window.scrollY/66*20 + "%"; //80% de base et on ajoute petit à petit jusqu'a ajouter 20% à 66 de scrollY
+function futureHeaderWiden(){ //43 à 100%
+  futureHeader.style.width = (80+(window.scrollY/(window.innerHeight*(43/941)))*20) + "%"; //80% de base et on ajoute petit à petit jusqu'a ajouter 20% à 43 de scrollY
 }
