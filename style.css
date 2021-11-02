@@ -1,15 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Courgette:400,700&display=swap");
 
-header{
-    height: 100vh;
-}
-
 body {
     margin: 0px;
 }
 
 .parallax-effect {
-    position: absolute;
+    position: static;
     height: 100vh;
     background-image: url("./images/moi-min.JPG");
     min-height: 300px;
@@ -44,12 +40,17 @@ body {
     text-align: center;
 }
 
-.text, .text p {
+.text{
     height: 1000px;
     background-image: linear-gradient(to right top, cyan, darkblue);
     font-size: 36px;
     text-align: center;
     font-family: 'Raleway', Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.text p {
     margin: 0px;
     padding: 0px;
 }
@@ -90,4 +91,46 @@ body {
     40% {opacity: 1;}
     60% {opacity: 0;}
     100% {opacity: 0;}
+}
+
+
+.skillbox{
+    box-sizing: border-box;
+    width: 50%;
+    margin: 20px 0;
+    transition: all 1s ease-out;
+}
+
+.skillbox p{
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    padding: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.skillbox p:nth-child(2){
+    float: right;
+    position: relative;
+    top: -25px;
+}
+
+.skill{
+    background: #282828;
+    padding: 4px;
+    box-sizing: border-box;
+    border: 1px solid #0fffb7;
+    border-radius: 2px;
+}
+
+.skill_level{
+    background: #0fffb7;
+    width: 100%;
+    height: 10px;
+}
+
+@keyframes fade-in{
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
 }
