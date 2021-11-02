@@ -30,6 +30,14 @@ body {
     margin: 0px;
 }
 
+#double-arrow-down{
+    width: 2%;
+    position: absolute;
+    align-self: bottom;
+    z-index: 5;
+    transform: translate(50vw, 90vh);
+    filter: invert(100%);
+}
 
 
 /* Background */
