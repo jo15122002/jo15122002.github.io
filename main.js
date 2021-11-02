@@ -6,6 +6,7 @@ var k = 0;
 var cursorPos = 0;
 
 const skills = [
+  {text: "Happy", color: "green"},
   {text: "Curious", color: "yellow"},
   {text: "Autonomous", color: "orange"},
   {text: "Demon lord", color: "red"},
