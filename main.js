@@ -35,10 +35,10 @@ window.addEventListener("scroll", function(){
   }
 });
 
-
+//Custom Cursor
 document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.pageX + 'px'
-  cursor.style.top = e.pageY + 'px'
+  cursor.style.left = e.pageX - scrollX + 'px'
+  cursor.style.top = e.pageY - scrollY + 'px'
 })
 
 
