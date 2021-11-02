@@ -18,7 +18,8 @@ const skills = [
 const futureHeader = document.querySelector(".bg-text");
 const futureHeaderH1 = futureHeader.childNodes[1];
 
-
+///Custom cursor Variables
+const cursor = document.querySelector(".cursor")
 
 //CODE ===========================================================================================================
 typeWriter();
@@ -34,6 +35,11 @@ window.addEventListener("scroll", function(){
   }
 });
 
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.pageX + 'px'
+  cursor.style.top = e.pageY + 'px'
+})
 
 
 
