@@ -115,9 +115,10 @@ body {
 .burger-menu-icon{
     display: inline;
     height: 100%;
-    width: 10%;
+    width: 60px;
     padding: 0px;
     margin: 0px;
+    margin-left: 1%;
     align-self: flex-start;
 }
 
@@ -129,9 +130,19 @@ body {
     background: white;
     border-radius: 9px;
     align-self: center;
+    transform-origin: 50% 50%;
+    transition: ease all 0.2s;
 }
 
-
+.burger-menu-icon:hover span:nth-child(2){
+    opacity: 0%;
+}
+.burger-menu-icon:hover span:nth-child(1){
+    transform: rotate(45deg) translate(-10%, 350%);
+}
+.burger-menu-icon:hover span:nth-child(3){
+    transform: rotate(-45deg) translate(20%, 0%);
+}
 
 
 
