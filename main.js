@@ -19,9 +19,10 @@ const futureHeader = document.querySelector(".bg-text");
 const futureHeaderH1 = futureHeader.childNodes[1];
 
 ///Custom cursor Variables
-const cursor = document.querySelector(".cursor")
+const cursor = document.querySelector(".cursor");
 
-
+///Double arrow variables
+const doubleArrowDown = document.querySelector("#double-arrow-down");
 
 
 
@@ -33,12 +34,12 @@ typeWriter();
 
 
 window.addEventListener("scroll", function(){
-  console.log(((window.innerWidth - 5)/window.innerWidth*100))
   if(scrollY <= window.innerHeight*(43/941)){
     futureHeader.style.top = "0px";
+    doubleArrowDown.style.opacity = (100 - (window.scrollY/(window.innerHeight*(43/941))*100)) + "%";
     futureHeaderWiden();
   }else{
-    futureHeader.style.width = ((window.innerWidth - 3)/window.innerWidth*100) + "%";
+    futureHeader.style.width = ((100 - (3/window.innerWidth)*100)) + "%";
     futureHeader.style.top = window.scrollY - 43 + "px";
   }
 });
@@ -48,9 +49,13 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.pageX - scrollX + 'px'
   cursor.style.top = e.pageY - scrollY + 'px'
 })
-
-
-
+///Hide or show the cursor if the mouse is inside or outside the document
+document.addEventListener("mouseleave", () =>{
+  cursor.style.visibility = "hidden";
+})
+document.addEventListener("mouseenter", () =>{
+  cursor.style.visibility = "visible";
+})
 
 
 
@@ -104,5 +109,5 @@ function typeDeleter(){
 }
 
 function futureHeaderWiden(){ //43 à 100%
-  futureHeader.style.width = (80+(window.scrollY/(window.innerHeight*(43/941)))*20) + "%"; //80% de base et on ajoute petit à petit jusqu'a ajouter 20% à 43 de scrollY
+  futureHeader.style.width = (80 +(window.scrollY/(window.innerHeight*(43/941)))*20) + "%"; //80% de base et on ajoute petit à petit jusqu'a ajouter 20% à 43 de scrollY
 }

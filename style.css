@@ -39,6 +39,9 @@ body {
     filter: invert(100%) brightness(45%);
 }
 
+.hidden{
+    visibility: hidden;
+}
 
 /* Background */
 .parallax-effect {
@@ -79,8 +82,18 @@ body {
     padding: 20px;
     font-family: "Courgette", cursive;
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 
+.bg-text h1{
+    margin: auto;
+}
+
+
+
+
+/* Text under */
 .text{
     height: 1000px;
     background-image: linear-gradient(to right top, cyan, darkblue);
@@ -95,6 +108,30 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+
+
+/* Burger menu */
+.burger-menu-icon{
+    display: inline;
+    height: 100%;
+    width: 10%;
+    padding: 0px;
+    margin: 0px;
+    align-self: flex-start;
+}
+
+.burger-menu-icon span{
+    display: block;
+    margin:4px;
+    height: 9px;
+    width:60px;
+    background: white;
+    border-radius: 9px;
+    align-self: center;
+}
+
+
 
 
 
