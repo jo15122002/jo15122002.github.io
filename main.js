@@ -62,7 +62,7 @@ document.addEventListener("mouseenter", () =>{
 
 //Burger menu
 burgerMenuIcon.addEventListener("click", () =>{
-  c("div", myName, "Ma bite", "menu-item");
+  c("div", myName, "Menu item", "menu-item");
 });
 
 
