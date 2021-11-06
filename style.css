@@ -75,18 +75,27 @@ body {
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
+    top: auto;
     left: 50%;
     transform: translate(-50%, 50%);
     z-index: 2;
     width: 80%;
+    height: auto;
     padding: 20px;
     font-family: "Courgette", cursive;
     text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    height: auto;
 }
 
-.bg-text h1{
+.menu-header{
+    display: flex;
+    width: 100%;
+}
+
+.menu-header h1{
     margin: auto;
 }
 
@@ -119,7 +128,6 @@ body {
     padding: 0px;
     margin: 0px;
     margin-left: 1%;
-    align-self: flex-start;
 }
 
 .burger-menu-icon span{
@@ -144,6 +152,11 @@ body {
     transform: rotate(-405deg) translate(23%, 0%);
 }
 
+.menu-item{
+    width: 100%;
+    height: 100%;
+}
+
 
 
 /* TypeWritter */
@@ -156,7 +169,7 @@ body {
     position: absolute;
     left: 10%;
     top: 50%;
-    z-index: 3;
+    z-index: 1;
 }
 
 .typing-container {

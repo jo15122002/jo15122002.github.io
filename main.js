@@ -14,17 +14,19 @@ const skills = [
   {text: "Everything you need", color: "purple"}
 ]
 
-///Header Variables
+///Header variables
 const futureHeader = document.querySelector(".bg-text");
 const futureHeaderH1 = futureHeader.childNodes[1];
 
-///Custom cursor Variables
+///Custom cursor variables
 const cursor = document.querySelector(".cursor");
 
 ///Double arrow variables
 const doubleArrowDown = document.querySelector("#double-arrow-down");
 
-
+///Menu variable
+const myName = document.querySelector("#myName");
+const burgerMenuIcon = document.querySelector("#theRealMenuBurger");
 
 
 
@@ -57,7 +59,10 @@ document.addEventListener("mouseenter", () =>{
   cursor.style.visibility = "visible";
 })
 
-
+//Burger menu
+burgerMenuIcon.addEventListener("click", () =>{
+  c("div", myName, "Ma bite", "menu-item");
+});
 
 
 
@@ -111,3 +116,19 @@ function typeDeleter(){
 function futureHeaderWiden(){ //43 à 100%
   futureHeader.style.width = (80 +(window.scrollY/(window.innerHeight*(43/941)))*20) + "%"; //80% de base et on ajoute petit à petit jusqu'a ajouter 20% à 43 de scrollY
 }
+
+function c(tag, parent, text=null, classs=null, pId=null){
+  let element = document.createElement(tag);
+  if(text){
+      element.appendChild(document.createTextNode(text));
+  }
+  if(classs){
+      element.classList.add(classs);
+  }
+  if(pId){
+      element.id = pId;
+  }
+  parent.appendChild(element)
+
+  return element;
+};
