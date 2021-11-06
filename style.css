@@ -75,9 +75,15 @@ body {
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
-    top: auto;
-    left: 50%;
-    transform: translate(-50%, 50%);
+
+    /*Position centrée*/
+    top: 10%;
+    left: 0%;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 97.5%;
     z-index: 2;
     width: 80%;
     height: auto;

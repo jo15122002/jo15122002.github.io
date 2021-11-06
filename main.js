@@ -36,13 +36,14 @@ typeWriter();
 
 
 window.addEventListener("scroll", function(){
-  if(scrollY <= window.innerHeight*(43/941)){
-    futureHeader.style.top = "0px";
+  console.log(((futureHeader.innerHeight + 0.1*window.innerHeight + scrollY)/window.innerHeight) + "%");
+  if(scrollY <= window.innerHeight*0.1){//10% de la hauteur
+    futureHeader.style.top = "10%";
     doubleArrowDown.style.opacity = (100 - (window.scrollY/(window.innerHeight*(43/941))*100)) + "%";
     futureHeaderWiden();
   }else{
     futureHeader.style.width = ((100 - (3/window.innerWidth)*100)) + "%";
-    futureHeader.style.top = window.scrollY - 43 + "px";
+    futureHeader.style.top = scrollY/window.innerHeight*100 + "%";
   }
 });
 
