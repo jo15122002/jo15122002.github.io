@@ -27,6 +27,9 @@ const doubleArrowDown = document.querySelector("#double-arrow-down");
 ///Menu variable
 const myName = document.querySelector("#myName");
 const burgerMenuIcon = document.querySelector("#theRealMenuBurger");
+const eachMenuWanted = ["Download my cv", "About me", "My skills"]
+const eachMenuItems = [];
+var opened = false;
 
 
 
@@ -64,7 +67,17 @@ document.addEventListener("mouseenter", () =>{
 
 //Burger menu
 burgerMenuIcon.addEventListener("click", () =>{
-  c("div", myName, "Menu item", "menu-item");
+  if(!opened){
+    eachMenuWanted.forEach(element => {
+      eachMenuItems.push(c("div", myName, element, "menu-item"));
+    });
+    opened = true;
+  }else{
+    eachMenuItems.forEach(element => {
+      element.remove();
+    });
+    opened = false;
+  }
 });
 
 
