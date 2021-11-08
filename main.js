@@ -47,7 +47,7 @@ window.addEventListener("scroll", function(){
     futureHeaderWiden();
   }else{
     futureHeader.style.width = ((100 - (3/window.innerWidth)*100)) + "%";
-    futureHeader.style.top = scrollY/window.innerHeight*100 + "%";
+    futureHeader.style.top = scrollY + "px";
     futureHeader.style.backgroundColor = "rgb(0,0,0)";
   }
 });
