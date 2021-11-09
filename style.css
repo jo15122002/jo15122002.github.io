@@ -189,7 +189,7 @@ body {
     color: black;
     font-weight: bold;
     font-family: "Courgette", cursive;
-    font-size: 6.5vw;
+    font-size: 6.544vw;
     width: 80%;
 
     position: absolute;
@@ -211,7 +211,7 @@ body {
 .input-cursor {
     display: inline-block;
     width: 2px;
-    height: 60px;
+    height: 1em;
     background-color: white;
     margin-left: 10px;
     animation: blink .6s linear infinite alternate;
