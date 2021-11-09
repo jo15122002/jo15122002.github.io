@@ -142,8 +142,8 @@ function typeDeleter(){
   }
 }
 
-function futureHeaderWiden(){ //43 à 100%
-  futureHeader.style.width = (80 +(window.scrollY/(window.innerHeight*(43/941)))*20) + "%"; //80% de base et on ajoute petit à petit jusqu'a ajouter 20% à 43 de scrollY
+function futureHeaderWiden(){ //10% de la hauteur en scroll à 100% de largeur
+  futureHeader.style.width = (80 + scrollY/window.innerHeight*100*2) + "%"; //80% de base et on ajoute petit à petit jusqu'a ajouter 20% à 43 de scrollY
 }
 
 function c(tag, parent, text=null, classs=null, pId=null){
