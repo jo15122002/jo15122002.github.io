@@ -78,6 +78,7 @@ burgerMenuIcon.addEventListener("click", () =>{
     eachMenuItems.forEach(element => {
       element.remove();
     });
+    burgerMenuIcon.classList.remove("toCross");
     opened = false;
   }
 });
