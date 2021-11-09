@@ -149,14 +149,24 @@ body {
     transition: ease all 0.5s;
 }
 
-#theRealMenuBurger:hover span:nth-child(2){
+.toArrowDown span:nth-child(1){
+    transform: translate(-32%, 139%) rotate(405deg);
+}
+.toArrowDown span:nth-child(2){
     opacity: 0%;
 }
-#theRealMenuBurger:hover span:nth-child(1){
-    transform: rotate(405deg) translate(-13%, 350%);
+.toArrowDown span:nth-child(3){
+    transform: translate(32%, -141%) rotate(-405deg);
 }
-#theRealMenuBurger:hover span:nth-child(3){
-    transform: rotate(-405deg) translate(23%, 0%);
+
+.toCross span:nth-child(1){
+    transform: translate(1%, 140%) rotate(405deg);
+}
+.toCross span:nth-child(2){
+    opacity: 0%;
+}
+.toCross span:nth-child(3){
+    transform: translate(-1%, -140%) rotate(-405deg);
 }
 
 .menu-item{

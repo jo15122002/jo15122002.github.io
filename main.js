@@ -70,6 +70,8 @@ burgerMenuIcon.addEventListener("click", () =>{
   if(!opened){
     eachMenuWanted.forEach(element => {
       eachMenuItems.push(c("div", myName, element, "menu-item"));
+      burgerMenuIcon.classList.add("toCross");
+      burgerMenuIcon.classList.remove("toArrowDown");
     });
     opened = true;
   }else{
@@ -78,6 +80,16 @@ burgerMenuIcon.addEventListener("click", () =>{
     });
     opened = false;
   }
+});
+
+burgerMenuIcon.addEventListener("mouseover", () => {
+  if (!opened) {
+    burgerMenuIcon.classList.add("toArrowDown");
+  }
+});
+
+burgerMenuIcon.addEventListener("mouseleave", () => {
+  burgerMenuIcon.classList.remove("toArrowDown");
 });
 
 
