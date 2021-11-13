@@ -27,7 +27,7 @@ const doubleArrowDown = document.querySelector("#double-arrow-down");
 ///Menu variable
 const myName = document.querySelector("#myName");
 const burgerMenuIcon = document.querySelector("#theRealMenuBurger");
-const eachMenuWanted = ["Download my cv", "About me", "My skills"]
+const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences", "Projects", "Contact", "Faut que je mette tout ça sur 1 ou 2 lignes"]
 const eachMenuItems = [];
 var opened = false;
 
