@@ -9,8 +9,8 @@ const skills = [
   {text: "Happy", color: "green"},
   {text: "Curious", color: "yellow"},
   {text: "Autonomous", color: "orange"},
-  {text: "Demon lord", color: "red"},
-  {text: "Team Player", color: "blue"},
+  {text: "Persevering", color: "red"},
+  {text: "A team Player", color: "blue"},
   {text: "Everything you need", color: "purple"}
 ]
 
