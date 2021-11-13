@@ -82,7 +82,7 @@ body {
     margin-left: auto;
     margin-right: auto;
 
-    max-width: 97.5%;
+    max-width: calc(100% - 46px);
     z-index: 2;
     width: 80%;
     height: auto;
@@ -93,6 +93,38 @@ body {
     flex-direction: column;
     align-items: center;
     height: auto;
+    -webkit-transition: height 2s;
+    transition: height 2s;
+    transition: ease 0.25s background-color;
+}
+
+.bg-text-menu{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+
+    /*Position centrée*/
+    top: 10%;
+    left: 0%;
+    right: 0%;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    z-index: 2;
+    width: calc(100% - 46px);
+    height: auto;
+    padding: 20px;
+    font-family: "Courgette", cursive;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    -webkit-transition: height 2s;
+    transition: height 2s;
     transition: ease 0.25s background-color;
 }
 

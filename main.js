@@ -39,14 +39,18 @@ typeWriter();
 
 
 window.addEventListener("scroll", function(){
-  console.log(((futureHeader.innerHeight + 0.1*window.innerHeight + scrollY)/window.innerHeight) + "%");
-  if(scrollY <= window.innerHeight*0.1){//10% de la hauteur
+  if (scrollY <= window.innerHeight * 0.1) {//10% de la hauteur
+    futureHeader.classList.remove("bg-text-menu");
+    futureHeader.classList.add("bg-text");
     futureHeader.style.top = "10%";
     doubleArrowDown.style.opacity = (100 - (window.scrollY/(window.innerHeight*(43/941))*100)) + "%";
     futureHeader.style.backgroundColor = "rgba(0,0,0, 0.4)";
     futureHeaderWiden();
-  }else{
-    futureHeader.style.width = ((100 - (3/window.innerWidth)*100)) + "%";
+  } else {
+    futureHeader.style.width = "";
+    futureHeader.classList.add("bg-text-menu");
+    futureHeader.classList.remove("bg-text");
+    
     futureHeader.style.top = scrollY + "px";
     futureHeader.style.backgroundColor = "rgb(0,0,0)";
   }
