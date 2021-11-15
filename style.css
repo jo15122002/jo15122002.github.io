@@ -98,6 +98,7 @@ body {
     transition: ease 0.25s background-color;
 }
 
+/* Menu */
 .bg-text-menu{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
@@ -138,8 +139,22 @@ body {
     margin: auto;
 }
 
+.menu-item{
+    transition: all 1s ease;
+}
 
+.menuDiv{
+    margin-top: 20px;
+    font-family: Calibri;
+}
 
+.bg-text-menu .menuDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 1s;
+}
 
 /* Text under */
 .text{

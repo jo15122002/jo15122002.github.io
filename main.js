@@ -24,10 +24,11 @@ const cursor = document.querySelector(".cursor");
 ///Double arrow variables
 const doubleArrowDown = document.querySelector("#double-arrow-down");
 
-///Menu variable
+///Menu variables
 const myName = document.querySelector("#myName");
+let menuDiv;
 const burgerMenuIcon = document.querySelector("#theRealMenuBurger");
-const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences", "Projects", "Contact", "Faut que je mette tout ça sur 1 ou 2 lignes"]
+const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences", "Projects", "Contact"];
 const eachMenuItems = [];
 var opened = false;
 
@@ -43,16 +44,17 @@ window.addEventListener("scroll", function(){
     futureHeader.classList.remove("bg-text-menu");
     futureHeader.classList.add("bg-text");
     futureHeader.style.top = "10%";
-    doubleArrowDown.style.opacity = (100 - (window.scrollY/(window.innerHeight*(43/941))*100)) + "%";
+    doubleArrowDown.style.opacity = (100 - (window.scrollY)) + "%";
     futureHeader.style.backgroundColor = "rgba(0,0,0, 0.4)";
     futureHeaderWiden();
   } else {
     futureHeader.style.width = "";
     futureHeader.classList.add("bg-text-menu");
     futureHeader.classList.remove("bg-text");
-    
     futureHeader.style.top = scrollY + "px";
     futureHeader.style.backgroundColor = "rgb(0,0,0)";
+
+    doubleArrowDown.style.opacity = "0%";
   }
 });
 
@@ -71,17 +73,19 @@ document.addEventListener("mouseenter", () =>{
 
 //Burger menu
 burgerMenuIcon.addEventListener("click", () =>{
-  if(!opened){
+  if (!opened) {
+    menuDiv = c("div", myName, "", "menuDiv");
     eachMenuWanted.forEach(element => {
-      eachMenuItems.push(c("div", myName, element, "menu-item"));
+      eachMenuItems.push(c("div", menuDiv, element, "menu-item"));
       burgerMenuIcon.classList.add("toCross");
       burgerMenuIcon.classList.remove("toArrowDown");
     });
     opened = true;
-  }else{
+  } else {
     eachMenuItems.forEach(element => {
       element.remove();
     });
+    menuDiv.remove();
     burgerMenuIcon.classList.remove("toCross");
     opened = false;
   }
@@ -150,13 +154,13 @@ function futureHeaderWiden(){ //10% de la hauteur en scroll à 100% de largeur
   futureHeader.style.width = (80 + scrollY/window.innerHeight*100*2) + "%"; //80% de base et on ajoute petit à petit jusqu'a ajouter 20% à 43 de scrollY
 }
 
-function c(tag, parent, text=null, classs=null, pId=null){
+function c(tag, parent, text=null, pClass=null, pId=null){
   let element = document.createElement(tag);
   if(text){
       element.appendChild(document.createTextNode(text));
   }
-  if(classs){
-      element.classList.add(classs);
+  if(pClass){
+      element.classList.add(pClass);
   }
   if(pId){
       element.id = pId;
