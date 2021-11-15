@@ -139,22 +139,6 @@ body {
     margin: auto;
 }
 
-.menu-item{
-    transition: all 1s ease;
-}
-
-.menuDiv{
-    margin-top: 20px;
-    font-family: Calibri;
-}
-
-.bg-text-menu .menuDiv{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    transition: all 1s;
-}
 
 /* Text under */
 .text{
@@ -224,9 +208,28 @@ body {
     transition: 0.2s all ease;
 }
 
+.menu-item a{
+    text-decoration: none;
+    color: white;
+}
+
 .menu-item:hover{
     filter:brightness(100%);
     background-blend-mode: difference;
+}
+
+
+.menuDiv{
+    margin-top: 20px;
+    font-family: Calibri;
+}
+
+.bg-text-menu .menuDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 1s;
 }
 
 

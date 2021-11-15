@@ -76,10 +76,20 @@ burgerMenuIcon.addEventListener("click", () =>{
   if (!opened) {
     menuDiv = c("div", myName, "", "menuDiv");
     eachMenuWanted.forEach(element => {
-      eachMenuItems.push(c("div", menuDiv, element, "menu-item"));
-      burgerMenuIcon.classList.add("toCross");
-      burgerMenuIcon.classList.remove("toArrowDown");
+      let menuItem = c("div", menuDiv, "", "menu-item")
+      let menuItemHref = c("a", menuItem, element);
+
+      if (element == "Download my cv") {
+        menuItemHref.setAttribute('href', './assets/Cv_Joyce_WAGNER.pdf');
+      } else {
+        menuItemHref.setAttribute('href', '#'+element);
+      }
+      
+      eachMenuItems.push(menuItem);
+      eachMenuItems.push(menuItemHref);
     });
+    burgerMenuIcon.classList.add("toCross");
+    burgerMenuIcon.classList.remove("toArrowDown");
     opened = true;
   } else {
     eachMenuItems.forEach(element => {
