@@ -165,5 +165,3 @@ function c(tag, parent, text=null, classs=null, pId=null){
 
   return element;
 };
-
-//to restart auto deploy
