@@ -84,6 +84,15 @@ burgerMenuIcon.addEventListener("click", () =>{
       } else {
         menuItemHref.setAttribute('href', '#'+element);
       }
+
+      //ToDo smooth scroll
+      menuItemHref.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        document.getElementById((menuItemHref.getAttribute('href')).substr(1)).scrollIntoView({
+            behavior: 'smooth'
+        });
+      });
       
       eachMenuItems.push(menuItem);
       eachMenuItems.push(menuItemHref);
@@ -111,7 +120,15 @@ burgerMenuIcon.addEventListener("mouseleave", () => {
   burgerMenuIcon.classList.remove("toArrowDown");
 });
 
+document.querySelectorAll('href').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
 
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
 
 
 
