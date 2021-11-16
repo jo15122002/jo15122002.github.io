@@ -75,7 +75,7 @@ body {
     border: 3px solid #f1f1f1;
     position: absolute;
 
-    /*Position centrée*/
+    /*Centered position*/
     top: 10%;
     left: 0%;
     right: 0%;
@@ -137,26 +137,8 @@ body {
 
 .menu-header h1{
     margin: auto;
+    font-size: 2vw;
 }
-
-
-/* Text under */
-.text{
-    height: 1000px;
-    background-image: linear-gradient(to right top, cyan, darkblue);
-    font-size: 36px;
-    text-align: center;
-    font-family: 'Raleway', Arial, sans-serif;
-    margin: 0px;
-    padding: 0px;
-}
-
-.text p {
-    margin: 0px;
-    padding: 0px;
-}
-
-
 
 /* Burger menu */
 .burger-menu-icon{
@@ -204,7 +186,7 @@ body {
     width: 100%;
     height: 100%;
     filter: brightness(70%);
-    font-size: 200%;
+    font-size: 2vw;
     transition: 0.2s all ease;
 }
 
@@ -220,7 +202,7 @@ body {
 
 
 .menuDiv{
-    margin-top: 20px;
+    margin-top: 2%;
     font-family: Calibri;
 }
 
@@ -272,6 +254,25 @@ body {
     40% {opacity: 1;}
     60% {opacity: 0;}
     100% {opacity: 0;}
+}
+
+
+
+/* Parts */
+.part{
+    height: 100vh;
+    background-image: linear-gradient(to right top, cyan, darkblue);
+    font-size: 36px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.part p {
+    width: 80%;
+    margin: auto;
 }
 
 
