@@ -91,18 +91,23 @@ burgerMenuIcon.addEventListener("click", () =>{
         e.preventDefault();
         let element = document.getElementById((menuItemHref.getAttribute('href')).substr(1));
         //creating an anchor to consider menu height
+        if (scrollY <= window.innerHeight * 0.1) {
+          futureHeader.style.width = "";
+          futureHeader.classList.add("bg-text-menu");
+          futureHeader.classList.remove("bg-text");
+        }
         let anchor = c("div", element, "", "anchor");
         anchor.style.top = -1 * futureHeader.clientHeight + "px";
 
         if (menuItemHref.getAttribute('href') == './assets/Cv_Joyce_WAGNER.pdf') {
           window.location.href = "./assets/Cv_Joyce_WAGNER.pdf"
         }
-
+        
         anchor.scrollIntoView({
           behavior: 'smooth',
         });
-
         anchor.remove();
+
       });
       
       //Store each menu items for later use
