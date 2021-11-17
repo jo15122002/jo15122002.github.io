@@ -32,11 +32,13 @@ const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences"
 const eachMenuItems = [];
 var opened = false;
 
-
+///Other variables
+const allParts = document.querySelector(".allParts");
 
 
 //CODE ===========================================================================================================
 typeWriter();
+backgroundStars(500);
 
 
 window.addEventListener("scroll", function(){
@@ -93,7 +95,7 @@ burgerMenuIcon.addEventListener("click", () =>{
           window.location.href = "./assets/Cv_Joyce_WAGNER.pdf"
         }
         let element = document.getElementById((menuItemHref.getAttribute('href')).substr(1));
-        //creating an anchor to consider menu height
+        //creating an anchor to consider menu height while scrolling
         if (scrollY <= window.innerHeight * 0.1) {
           futureHeader.style.width = "";
           futureHeader.classList.add("bg-text-menu");
@@ -214,3 +216,13 @@ function c(tag, parent, text=null, pClass=null, pId=null){
 
   return element;
 };
+
+function backgroundStars(nb) {
+  for (let i = 0; i <= nb; i++){
+    setTimeout(() => {
+      let star = c('span', allParts, '', 'star', 'star'+Math.ceil(Math.random()*3));
+      star.style.left = (Math.random() * allParts.clientWidth) + "px";
+      star.style.top = (Math.random() * allParts.clientHeight) + "px";
+    }, Math.random()*15000);
+  }
+}

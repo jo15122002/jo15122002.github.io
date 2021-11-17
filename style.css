@@ -1,5 +1,6 @@
 /* Imports */
 @import url("https://fonts.googleapis.com/css?family=Courgette:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
 
 
@@ -295,9 +296,42 @@ body {
 
 
 /* Parts */
+
+.allParts{
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    position: relative;
+}
+
+@keyframes animStar{
+    0% {top: 100%;}
+    100% {top: 0%;}
+}
+
+.star{
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+}
+
+#star1{
+    animation: animStar 15s linear infinite;
+    border: 1px rgba(255, 255, 255, 0.50) solid;
+}
+
+#star2{
+    animation: animStar 20s linear infinite;
+    border: 2px rgba(255, 255, 255, 0.50) solid;
+}
+
+#star3{
+    animation: animStar 30s linear infinite;
+    border: 3px rgba(255, 255, 255, 0.50) solid;
+}
+
 .part{
     height: 100vh;
-    background: linear-gradient(to right top, cyan, darkblue);
     font-size: 36px;
     text-align: center;
     align-items: center;
@@ -305,11 +339,23 @@ body {
     margin: 0px;
     padding: 0px;
     position: relative;
+    color: white;
 }
 
 .part p {
     width: 80%;
     margin: auto;
+}
+
+.part h1, .part p{
+    font-family: Lato, sans-serif;
+}
+
+.part h1{
+    background: -webkit-linear-gradient(white, #38495a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
