@@ -8,6 +8,7 @@
 *{
     cursor: none;
     margin: 0px;
+    overflow-x: initial;
 }
 
 ::-webkit-scrollbar {
