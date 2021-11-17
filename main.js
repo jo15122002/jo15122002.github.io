@@ -5,7 +5,7 @@ var i = 0;
 var k = 0;
 var cursorPos = 0;
 
-const skills = [
+const traits = [
   {text: "Happy", color: "green"},
   {text: "Curious", color: "yellow"},
   {text: "Autonomous", color: "orange"},
@@ -165,13 +165,13 @@ document.querySelectorAll('href').forEach(anchor => {
 //FUNCTIONS ======================================================================================================
 
 function typeWriter() {
-  if(k >= skills.length){
+  if(k >= traits.length){
     k = 0;
   }
-  if(i < skills[k].text.length){ //si on est toujours dans le mot actuel alors on continue à écrire
-    typer.style.color = skills[k].color;
+  if(i < traits[k].text.length){ //si on est toujours dans le mot actuel alors on continue à écrire
+    typer.style.color = traits[k].color;
     setTimeout(() => {
-      typer.innerHTML += skills[k].text.charAt(i);
+      typer.innerHTML += traits[k].text.charAt(i);
       i++;
       typeWriter();
     }, 100);
@@ -222,7 +222,6 @@ function backgroundBubbles(nb) {
     setTimeout(() => {
       let bubble = c('span', allParts, '', 'bubble', 'bubble'+Math.ceil(Math.random()*3));
       bubble.style.left = (Math.random() * allParts.clientWidth) + "px";
-      bubble.style.top = (Math.random() * allParts.clientHeight) + "px";
     }, Math.random()*15000);
   }
 }
