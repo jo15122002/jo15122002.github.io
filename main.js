@@ -38,7 +38,7 @@ const allParts = document.querySelector(".allParts");
 
 //CODE ===========================================================================================================
 typeWriter();
-backgroundStars(500);
+backgroundBubbles(250);
 
 
 window.addEventListener("scroll", function(){
@@ -217,12 +217,12 @@ function c(tag, parent, text=null, pClass=null, pId=null){
   return element;
 };
 
-function backgroundStars(nb) {
+function backgroundBubbles(nb) {
   for (let i = 0; i <= nb; i++){
     setTimeout(() => {
-      let star = c('span', allParts, '', 'star', 'star'+Math.ceil(Math.random()*3));
-      star.style.left = (Math.random() * allParts.clientWidth) + "px";
-      star.style.top = (Math.random() * allParts.clientHeight) + "px";
+      let bubble = c('span', allParts, '', 'bubble', 'bubble'+Math.ceil(Math.random()*3));
+      bubble.style.left = (Math.random() * allParts.clientWidth) + "px";
+      bubble.style.top = (Math.random() * allParts.clientHeight) + "px";
     }, Math.random()*15000);
   }
 }

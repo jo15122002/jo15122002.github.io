@@ -298,16 +298,16 @@ body {
 /* Parts */
 
 .allParts{
-    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
     position: relative;
 }
 
-@keyframes animStar{
+@keyframes animBubble{
     0% {top: 100%;}
     100% {top: 0%;}
 }
 
-.star{
+.bubble{
     width: 1px;
     height: 1px;
     border-radius: 50%;
@@ -315,18 +315,18 @@ body {
     position: absolute;
 }
 
-#star1{
-    animation: animStar 15s linear infinite;
+#bubble1{
+    animation: animBubble 15s linear infinite;
     border: 1px rgba(255, 255, 255, 0.50) solid;
 }
 
-#star2{
-    animation: animStar 20s linear infinite;
+#bubble2{
+    animation: animBubble 20s linear infinite;
     border: 2px rgba(255, 255, 255, 0.50) solid;
 }
 
-#star3{
-    animation: animStar 30s linear infinite;
+#bubble3{
+    animation: animBubble 30s linear infinite;
     border: 3px rgba(255, 255, 255, 0.50) solid;
 }
 
