@@ -188,6 +188,33 @@ body {
     transition: 0.2s all ease;
 }
 
+
+@media only screen and (max-device-width: 1023px) {
+    .menu-header{
+        font-size: 4vw;
+    }
+    .menu-item{
+        font-size: 4vw;
+    }
+    .menu-header h1{
+        margin: auto;
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-device-width: 426px) {
+    .menu-header{
+        font-size: 4.5vw;
+    }
+    .menu-item{
+        font-size: 4.5vw;
+    }
+    .menu-header h1{
+        margin: auto;
+        font-size: 4.5vw;
+    }
+}
+
 .menu-item a{
     text-decoration: none;
     color: white;
