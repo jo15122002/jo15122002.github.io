@@ -53,7 +53,6 @@ window.addEventListener("scroll", function(){
     futureHeader.classList.remove("bg-text");
     futureHeader.style.top = scrollY + "px";
     futureHeader.style.backgroundColor = "rgb(0,0,0)";
-
     doubleArrowDown.style.opacity = "0%";
   }
 });
@@ -76,24 +75,37 @@ burgerMenuIcon.addEventListener("click", () =>{
   if (!opened) {
     menuDiv = c("div", myName, "", "menuDiv");
     eachMenuWanted.forEach(element => {
+      //Create each menu items
       let menuItem = c("div", menuDiv, "", "menu-item")
       let menuItemHref = c("a", menuItem, element);
 
+      //Set href for each menu items
       if (element == "Download my cv") {
         menuItemHref.setAttribute('href', './assets/Cv_Joyce_WAGNER.pdf');
       } else {
         menuItemHref.setAttribute('href', '#'+element);
       }
 
-      //ToDo smooth scroll
+      //Smooth scroll
       menuItemHref.addEventListener('click', function (e) {
         e.preventDefault();
-  
-        document.getElementById((menuItemHref.getAttribute('href')).substr(1)).scrollIntoView({
-            behavior: 'smooth'
+        let element = document.getElementById((menuItemHref.getAttribute('href')).substr(1));
+        //creating an anchor to consider menu height
+        let anchor = c("div", element, "", "anchor");
+        anchor.style.top = -1 * futureHeader.clientHeight + "px";
+
+        if (menuItemHref.getAttribute('href') == './assets/Cv_Joyce_WAGNER.pdf') {
+          window.location.href = "./assets/Cv_Joyce_WAGNER.pdf"
+        }
+
+        anchor.scrollIntoView({
+          behavior: 'smooth',
         });
+
+        anchor.remove();
       });
       
+      //Store each menu items for later use
       eachMenuItems.push(menuItem);
       eachMenuItems.push(menuItemHref);
     });
@@ -106,6 +118,7 @@ burgerMenuIcon.addEventListener("click", () =>{
     });
     menuDiv.remove();
     burgerMenuIcon.classList.remove("toCross");
+    burgerMenuIcon.classList.add("toArrowDown");
     opened = false;
   }
 });
