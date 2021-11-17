@@ -92,7 +92,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
     -webkit-transition: height 2s;
     transition: height 2s;
     transition: ease 0.25s background-color;
@@ -123,7 +122,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
     -webkit-transition: height 2s;
     transition: height 2s;
     transition: ease 0.25s background-color;
