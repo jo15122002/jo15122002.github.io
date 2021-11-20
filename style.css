@@ -301,6 +301,7 @@ body {
 .allParts{
     background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
     position: relative;
+    overflow: hidden;
 }
 
 @keyframes animBubble{
@@ -309,8 +310,8 @@ body {
 }
 
 .bubble{
-    width: 1px;
-    height: 1px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     background: transparent;
     position: absolute;
@@ -371,6 +372,8 @@ body {
     display: flex;
     flex-direction: row;
     font-family: "Font Awesome";
+    display: flex;
+    flex-wrap: wrap;
 }
 .round {
     width: auto;

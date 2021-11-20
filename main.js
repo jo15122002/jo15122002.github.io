@@ -26,7 +26,7 @@ const doubleArrowDown = document.querySelector("#double-arrow-down");
 
 ///Menu variables
 const myName = document.querySelector("#myName");
-let menuDiv;
+let menuDiv = null;
 const burgerMenuIcon = document.querySelector("#theRealMenuBurger");
 const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences", "Projects", "Contact"];
 const eachMenuItems = [];
@@ -42,7 +42,7 @@ const allParts = document.querySelector(".allParts");
 
 //CODE ===========================================================================================================
 typeWriter();
-backgroundBubbles(125);
+backgroundBubbles(100);
 
 
 window.addEventListener("scroll", function(){
@@ -60,16 +60,7 @@ window.addEventListener("scroll", function(){
     futureHeader.style.top = scrollY + "px";
     futureHeader.style.backgroundColor = "rgb(0,0,0)";
     doubleArrowDown.style.opacity = "0%";
-  }
-
-  /*categoryContainers.forEach(element => {
-    if (isInViewport(element)) {
-      element.querySelectorAll(".round").forEach(element => {
-        Circlle(element);
-      });
-    }
-  });*/
-  
+  }  
 });
 
 //Custom Cursor
@@ -259,6 +250,7 @@ function isInViewport(element) {
   );
 }
 
+//Handler for observer
 function handler(entries, observer) {
   entries.forEach(element => {
     element.target.querySelectorAll(".round").forEach(element => {
