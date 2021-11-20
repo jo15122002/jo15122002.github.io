@@ -32,17 +32,21 @@ const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences"
 const eachMenuItems = [];
 var opened = false;
 
+///Skills variables
+const skills = document.querySelectorAll(".round");
+const categoryContainers = document.querySelectorAll(".categoryContainer");
+
 ///Other variables
 const allParts = document.querySelector(".allParts");
 
 
 //CODE ===========================================================================================================
 typeWriter();
-backgroundBubbles(250);
+backgroundBubbles(125);
 
 
 window.addEventListener("scroll", function(){
-  if (scrollY <= window.innerHeight * 0.1) {//10% de la hauteur
+  if (scrollY <= window.innerHeight * 0.1) {//10% of the height
     futureHeader.classList.remove("bg-text-menu");
     futureHeader.classList.add("bg-text");
     futureHeader.style.top = "10%";
@@ -57,6 +61,15 @@ window.addEventListener("scroll", function(){
     futureHeader.style.backgroundColor = "rgb(0,0,0)";
     doubleArrowDown.style.opacity = "0%";
   }
+
+  /*categoryContainers.forEach(element => {
+    if (isInViewport(element)) {
+      element.querySelectorAll(".round").forEach(element => {
+        Circlle(element);
+      });
+    }
+  });*/
+  
 });
 
 //Custom Cursor
@@ -104,7 +117,6 @@ burgerMenuIcon.addEventListener("click", () =>{
         let anchor = c("div", element, "", "anchor");
         anchor.style.top = -1 * futureHeader.clientHeight + "px";
 
-
         anchor.scrollIntoView({
           behavior: 'smooth',
         });
@@ -150,8 +162,10 @@ document.querySelectorAll('href').forEach(anchor => {
   });
 });
 
-
-
+let observer = new IntersectionObserver(handler);
+categoryContainers.forEach(element => {
+  observer.observe(element);
+});
 
 
 
@@ -224,4 +238,31 @@ function backgroundBubbles(nb) {
       bubble.style.left = (Math.random() * allParts.clientWidth) + "px";
     }, Math.random()*15000);
   }
+}
+
+
+//Fonctions réucépérées sur internet
+function Circlle(el, color){
+  $(el).circleProgress({fill: {color: '#ff5c5c'}})
+    .on('circle-animation-progress', function(event, progress, stepValue){
+ $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
+ });  
+};
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function handler(entries, observer) {
+  entries.forEach(element => {
+    element.target.querySelectorAll(".round").forEach(element => {
+      Circlle(element);
+    });
+  });
 }

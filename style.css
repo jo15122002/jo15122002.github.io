@@ -332,7 +332,7 @@ body {
 }
 
 .part{
-    height: 100vh;
+    height: auto;
     font-size: 36px;
     text-align: center;
     align-items: center;
@@ -341,6 +341,7 @@ body {
     padding: 0px;
     position: relative;
     color: white;
+    padding-bottom: 100px;
 }
 
 .part p {
@@ -361,41 +362,46 @@ body {
 
 
 
-/* Skillboxes */
-.skillbox{
-    box-sizing: border-box;
-    width: 50%;
-    margin: 0px;
-    transition: all 1s ease-out;
+/* Skill Part */
+.categoryContainer p{
+    margin-bottom: 10px;
 }
 
-.skillbox p{
-    color: #fff;
-    text-transform: uppercase;
-    margin: 0 0 10px;
-    padding: 0;
-    font-weight: bold;
-    letter-spacing: 1px;
+#SkillsContainer{
+    display: flex;
+    flex-direction: row;
+    font-family: "Font Awesome";
 }
-
-.skillbox p:nth-child(2){
-    float: right;
+.round {
+    width: auto;
+    min-height: 255px;
+    margin: 30px;
     position: relative;
-    top: -25px;
+    margin-bottom: 20px;
+    margin: auto;
 }
 
-.skill{
-    background: #282828;
-    padding: 4px;
-    box-sizing: border-box;
-    border: 1px solid #0fffb7;
-    border-radius: 2px;
+.round strong {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    transform: translate(-50%);
+    font-size: 5vwpx;
+    color: white;
+    font-weight: 100;
+}
+.round span {
+    display: block;
+    color: #999;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-.skill_level{
-    background: #0fffb7;
-    width: 100%;
-    height: 10px;
+.round span i {
+    color: #ff5c5c;
+    font-size: 22px;
+    margin-right: 6px;
 }
 
 /* Dino game */
