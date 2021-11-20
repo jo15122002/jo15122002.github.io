@@ -310,26 +310,29 @@ body {
 }
 
 .bubble{
-    width: 4px;
-    height: 4px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: transparent;
+    background: radial-gradient(transparent, transparent, rgba(255,255,255,0.1), white);;
     position: absolute;
 }
 
 #bubble1{
+    transform: scale(2);
     animation: animBubble 15s linear infinite;
-    border: 1px rgba(255, 255, 255, 0.50) solid;
+    /* border: 1px rgba(255, 255, 255, 0.50) solid; */
 }
 
 #bubble2{
+    transform: scale(4);
     animation: animBubble 20s linear infinite;
-    border: 2px rgba(255, 255, 255, 0.50) solid;
+    /* border: 2px rgba(255, 255, 255, 0.50) solid; */
 }
 
 #bubble3{
+     transform: scale(8);
     animation: animBubble 30s linear infinite;
-    border: 3px rgba(255, 255, 255, 0.50) solid;
+    /* border: 3px rgba(255, 255, 255, 0.50) solid; */
 }
 
 .part{

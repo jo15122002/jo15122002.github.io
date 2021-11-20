@@ -42,7 +42,7 @@ const allParts = document.querySelector(".allParts");
 
 //CODE ===========================================================================================================
 typeWriter();
-backgroundBubbles(100);
+backgroundBubbles(50);
 
 
 window.addEventListener("scroll", function(){
