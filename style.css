@@ -313,7 +313,7 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: radial-gradient(transparent, transparent, rgba(255,255,255,0.1), white);;
+    background: radial-gradient(transparent, transparent, rgba(255,255,255,0.1), white);
     position: absolute;
 }
 
@@ -415,4 +415,15 @@ body {
     width: 100%;
     background-color: black;
     color: white;
+}
+
+
+/* Contact part */
+.socialMedia a i{
+    color: #ff5c5c;
+    text-decoration: none;
+}
+
+.socialMedia a i:hover{
+    mix-blend-mode: difference;
 }
