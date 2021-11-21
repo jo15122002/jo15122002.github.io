@@ -296,6 +296,20 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Parts */
 
 .allParts{
@@ -346,6 +360,7 @@ body {
     position: relative;
     color: white;
     padding-bottom: 100px;
+    padding-top: 10px;
 }
 
 .part p {
@@ -364,7 +379,76 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+/* About me part*/
 
+
+
+/* Education */
+.education{
+    width: 95%;
+    height: 47vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.education .educationContainer{
+    width: 50%;
+    position: relative;
+    transition: width 0.75s ease;
+}
+
+.education .educationContainer .year{
+    width: auto;
+    z-index: 1;
+    position: absolute;
+    color: black;
+    /* centered */
+    transform-origin: 50% 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.education .educationContainer:hover .year{
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.education .educationContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 1s;
+}
+
+.education .educationContainer:hover img{
+    filter: blur(5px) brightness(40%);
+}
+.education .educationContainer:hover{
+    width: 100%;
+}
+
+.education .educationDescription{
+    position: absolute;
+    z-index: 1;
+    transition: all 1s ease;
+    opacity: 0%;
+    width: 90%;
+    /* centered */
+    transform-origin: 50% 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.education .educationContainer:hover .educationDescription{
+    opacity: 100%;
+}
+
+.educationDescription p{
+    font-size: medium;
+}
 
 /* Skill Part */
 .categoryContainer p{
@@ -425,5 +509,5 @@ body {
 }
 
 .socialMedia a i:hover{
-    mix-blend-mode: difference;
+    color: #9b0000;
 }
