@@ -494,11 +494,82 @@ body {
     margin-right: 6px;
 }
 
-/* Dino game */
-#dinoGameContainer{
+
+/* Projects part */
+.projectsContainer{
+    margin-top: 1%;
     width: 100%;
-    background-color: black;
-    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.projectBubble{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    background: radial-gradient(transparent, transparent, rgba(255,255,255,0.1), white);
+    overflow: hidden;
+    align-items: center;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.projectBubble:hover{
+    width: 200px;
+    height: 200px;
+}
+
+.projectBubble img{
+    height: 100%;
+    width: auto;
+    opacity: 50%;
+    transition: 1s ease all;
+}
+
+.projectBubble:hover img{
+    filter: brightness(25%);
+}
+
+.projectFullscreen{
+    z-index: 1;
+    transition: 1s ease all;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0px;
+    background-color: rgba(0,0,0, 0.8);
+}
+
+.projectBubble h6{
+    opacity: 0%;
+    position: absolute;
+    /* centered */
+    transform-origin: 50% 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s all ease;
+}
+
+.projectBubble:hover h6{
+    opacity: 100%;
+}
+
+.projectsContainer h3{
+    opacity: 0%;
+    transition: 1s ease all;
+}
+
+.projectFullscreen h3{
+    position: absolute;
+    opacity: 100%;
+    /* centered */
+    transform-origin: 50% 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -510,4 +581,12 @@ body {
 
 .socialMedia a i:hover{
     color: #9b0000;
+}
+
+
+/* Dino game */
+#dinoGameContainer{
+    width: 100%;
+    background-color: black;
+    color: white;
 }

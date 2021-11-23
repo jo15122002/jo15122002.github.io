@@ -1,9 +1,9 @@
 //VARIABLES ======================================================================================================
 ///TypeWritter variables =============================
 const typer = document.getElementById("feature-text");
-var i = 0;
-var k = 0;
-var cursorPos = 0;
+let i = 0;
+let k = 0;
+let cursorPos = 0;
 
 const traits = [
   {text: "Happy", color: "green"},
@@ -30,11 +30,16 @@ let menuDiv = null;
 const burgerMenuIcon = document.querySelector("#theRealMenuBurger");
 const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences", "Projects", "Contact"];
 const eachMenuItems = [];
-var opened = false;
+let menuOpened = false;
 
 ///Skills variables
 const skills = document.querySelectorAll(".round");
 const categoryContainers = document.querySelectorAll(".categoryContainer");
+
+///Projects variables
+const projectBubbles = document.querySelectorAll(".projectBubble");
+let projectBubbleOpened = false;
+
 
 ///Other variables
 const allParts = document.querySelector(".allParts");
@@ -78,7 +83,7 @@ document.addEventListener("mouseenter", () =>{
 
 //Burger menu
 burgerMenuIcon.addEventListener("click", () =>{
-  if (!opened) {
+  if (!menuOpened) {
     menuDiv = c("div", myName, "", "menuDiv");
     eachMenuWanted.forEach(element => {
       //Create each menu items
@@ -121,7 +126,7 @@ burgerMenuIcon.addEventListener("click", () =>{
     });
     burgerMenuIcon.classList.add("toCross");
     burgerMenuIcon.classList.remove("toArrowDown");
-    opened = true;
+    menuOpened = true;
   } else {
     eachMenuItems.forEach(element => {
       element.remove();
@@ -129,12 +134,12 @@ burgerMenuIcon.addEventListener("click", () =>{
     menuDiv.remove();
     burgerMenuIcon.classList.remove("toCross");
     burgerMenuIcon.classList.add("toArrowDown");
-    opened = false;
+    menuOpened = false;
   }
 });
 
 burgerMenuIcon.addEventListener("mouseover", () => {
-  if (!opened) {
+  if (!menuOpened) {
     burgerMenuIcon.classList.add("toArrowDown");
   }
 });
@@ -150,6 +155,23 @@ document.querySelectorAll('href').forEach(anchor => {
       document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
       });
+  });
+});
+
+//Projects bubbles
+projectBubbles.forEach(element => {
+  element.addEventListener("click", () => {
+    if (!projectBubbleOpened) {
+      element.classList.add("projectFullscreen");
+      element.classList.remove("projectBubble");
+      element.style.height = (window.innerHeight - myName.clientHeight) + "px";
+      projectBubbleOpened = true;
+    }else{
+      element.classList.remove("projectFullscreen");
+      element.classList.add("projectBubble");
+      element.style.height = "";
+      projectBubbleOpened = false;
+    }
   });
 });
 
