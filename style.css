@@ -572,6 +572,18 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.projectGithub{
+    position: absolute;
+    bottom: 1px;
+    margin: auto;
+    visibility: hidden;
+}
+
+.projectFullscreen .projectGithub{
+    visibility: visible;
+}
+
+
 
 /* Contact part */
 .socialMedia a i{
