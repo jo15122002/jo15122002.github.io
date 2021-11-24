@@ -271,10 +271,7 @@ function Circlle(el, color) {
       .on('circle-animation-progress', function (event, progress, stepValue) {
         $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2) + '%');
       });
-  }
-  
-  else {
-    $(el).circleProgress({fill: {color: '#ff5c5c'}})
+  }else {$(el).circleProgress({fill: {color: '#ff5c5c'}})
       .on('circle-animation-progress', function(event, progress, stepValue){
     $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
    });
