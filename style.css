@@ -506,8 +506,8 @@ body {
 }
 
 .projectBubble{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin: auto;
     border-radius: 50%;
     background: radial-gradient(transparent, transparent, rgba(255,255,255,0.1), white);
@@ -518,29 +518,24 @@ body {
 }
 
 .projectBubble:hover{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 
 .projectBubble img{
     height: 100%;
     width: auto;
     opacity: 50%;
-    transition: 1s ease all;
+    transform-origin: 50% 50%;
+    transform: translate(-25%, 0%);
+}
+
+.projectBubble .projectContent{
+    opacity: 0;
 }
 
 .projectBubble:hover img{
     filter: brightness(25%);
-}
-
-.projectFullscreen{
-    z-index: 1;
-    transition: 1s ease all;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    bottom: 0px;
-    background-color: rgba(0,0,0, 0.8);
 }
 
 .projectBubble h6{
@@ -558,10 +553,20 @@ body {
     opacity: 100%;
 }
 
-.projectsContainer h3{
-    opacity: 0%;
-    transition: 1s ease all;
+.projectFullscreen{
+    z-index: 1;
+    transition: 0.7s ease all;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0px;
+    background-color: rgba(0,0,0, 0.8);
 }
+
+.projectFullscreen h6{
+    visibility: hidden;
+}
+
 
 .projectFullscreen h3{
     position: absolute;
@@ -572,9 +577,10 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.projectGithub{
+.projectLink{
     position: absolute;
-    bottom: 1px;
+    width: 100%;
+    bottom: 0px;
     margin: auto;
     visibility: hidden;
 }
@@ -583,6 +589,10 @@ body {
     visibility: visible;
 }
 
+.projectFullscreen img{
+    height: 40vh;
+    width: auto;
+}
 
 
 /* Contact part */
