@@ -255,11 +255,30 @@ function backgroundBubbles(nb) {
 
 
 //Fonctions réucépérées sur internet
-function Circlle(el, color){
-  $(el).circleProgress({fill: {color: '#ff5c5c'}})
-    .on('circle-animation-progress', function(event, progress, stepValue){
- $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
- });  
+function Circlle(el, color) {
+  if ($(el).attr('id') == "french") {
+    $(el).circleProgress({ fill: { image: "./images/france-min.png" } })
+      .on('circle-animation-progress', function (event, progress, stepValue) {
+        $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2) + '%');
+      });
+  } else if($(el).attr('id') == "english") {
+    $(el).circleProgress({ fill: { image: "./images/english-min.png" } })
+      .on('circle-animation-progress', function (event, progress, stepValue) {
+        $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2) + '%');
+      });
+  } else if($(el).attr('id') == "german") {
+    $(el).circleProgress({ fill: { image: "./images/german-min.jpg" } })
+      .on('circle-animation-progress', function (event, progress, stepValue) {
+        $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2) + '%');
+      });
+  }
+  
+  else {
+    $(el).circleProgress({fill: {color: '#ff5c5c'}})
+      .on('circle-animation-progress', function(event, progress, stepValue){
+    $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
+   });
+  }
 };
 
 function isInViewport(element) {

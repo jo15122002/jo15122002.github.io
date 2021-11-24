@@ -494,6 +494,10 @@ body {
     margin-right: 6px;
 }
 
+#french strong{
+    color: black;
+}
+
 
 /* Projects part */
 .projectsContainer{
