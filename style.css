@@ -9,6 +9,7 @@
     cursor: none;
     margin: 0px;
     overflow-x: initial;
+    z-index: 1;
 }
 
 ::-webkit-scrollbar {
@@ -324,6 +325,7 @@ body {
 }
 
 .bubble{
+    z-index: 0;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -500,6 +502,10 @@ body {
 
 
 /* Projects part */
+#Projects{
+    z-index: 2;
+}
+
 .projectsContainer{
     margin-top: 1%;
     width: 100%;
@@ -558,7 +564,6 @@ body {
 }
 
 .projectFullscreen{
-    z-index: 1;
     transition: 0.7s ease all;
     position: fixed;
     width: 100vw;
