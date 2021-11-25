@@ -45,6 +45,9 @@ let projectBubbleOpened = false;
 ///Other variables
 const allParts = document.querySelector(".allParts");
 
+///Contact form variables
+const form = document.querySelector("#Contact form"),
+statusTxt = form.querySelector(".button-area span");
 
 //CODE ===========================================================================================================
 typeWriter();
@@ -312,8 +315,6 @@ function handler(entries, observer) {
 
 //WIP ============================================================================================================
 ///Contact Form in PHP
-const form = document.querySelector("#Contact form"),
-statusTxt = form.querySelector(".button-area span");
 form.onsubmit = (e)=>{
   e.preventDefault();
   statusTxt.style.color = "#0D6EFD";

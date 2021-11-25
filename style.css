@@ -367,11 +367,6 @@ body {
     padding-top: 10px;
 }
 
-.part p {
-    width: 80%;
-    margin: auto;
-}
-
 .part h1, .part p{
     font-family: Lato, sans-serif;
 }
@@ -384,7 +379,11 @@ body {
 }
 
 /* About me part*/
-
+.AboutMe p{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+}
 
 
 /* Education */
