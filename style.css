@@ -273,6 +273,8 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 #feature-text{
@@ -486,7 +488,7 @@ body {
 .round span {
     display: block;
     color: #999;
-    font-size: 16px;
+    font-size: 75%;
     margin-top: 10px;
 }
 
@@ -613,6 +615,57 @@ body {
 .socialMedia a i:hover{
     color: #9b0000;
 }
+
+
+/* References part */
+.referencesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.referenceCard{
+    height: auto;
+    width: auto;
+    margin: auto;
+    margin-top: 0%;
+}
+
+.referenceCard img{
+    border-radius: 50%;
+    transition: 0.5s all ease;
+}
+
+.referenceCard:hover img{
+    border-radius: 0%;
+}
+
+.referenceCard span{
+    font-size: 50%;
+}
+
+.referenceCard a{
+    text-decoration: none;
+    color: white;
+}
+
+.referenceCard a:hover{
+    color: #ff5c5c;
+}
+
+.referenceLinksContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1%;
+}
+
+.referenceLinksContainer span{
+    padding: 1px;
+}
+
 
 
 /* Dino game */

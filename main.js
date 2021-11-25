@@ -11,7 +11,8 @@ const traits = [
   {text: "Autonomous", color: "orange"},
   {text: "Persevering", color: "red"},
   {text: "A team Player", color: "blue"},
-  {text: "Everything you need", color: "purple"}
+  {text: "Everything you need", color: "purple"},
+  {text: "Looking for an internship :)", color: "#CF7CA9"},
 ]
 
 ///Header variables
@@ -28,7 +29,7 @@ const doubleArrowDown = document.querySelector("#double-arrow-down");
 const myName = document.querySelector("#myName");
 let menuDiv = null;
 const burgerMenuIcon = document.querySelector("#theRealMenuBurger");
-const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences", "Projects", "Contact"];
+const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences", "Projects", "References", "Contact"];
 const eachMenuItems = [];
 let menuOpened = false;
 
