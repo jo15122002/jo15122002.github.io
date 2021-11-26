@@ -58,7 +58,7 @@ window.addEventListener("scroll", function(){
   if (scrollY <= window.innerHeight * 0.1) {//10% of the height
     futureHeader.classList.remove("bg-text-menu");
     futureHeader.classList.add("bg-text");
-    futureHeader.style.top = "10%";
+    futureHeader.style.top = "";
     doubleArrowDown.style.opacity = (100 - (window.scrollY)) + "%";
     futureHeader.style.backgroundColor = "rgba(0,0,0, 0.4)";
     futureHeaderWiden();
@@ -66,7 +66,6 @@ window.addEventListener("scroll", function(){
     futureHeader.style.width = "";
     futureHeader.classList.add("bg-text-menu");
     futureHeader.classList.remove("bg-text");
-    futureHeader.style.top = scrollY + "px";
     futureHeader.style.backgroundColor = "rgb(0,0,0)";
     doubleArrowDown.style.opacity = "0%";
   }  

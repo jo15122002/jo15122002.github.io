@@ -107,10 +107,10 @@ body {
     color: white;
     font-weight: bold;
     border: 3px solid #f1f1f1;
-    position: absolute;
+    position: fixed;
 
     /*Position centrée*/
-    top: 10%;
+    top: 0%;
     left: 0%;
     right: 0%;
     margin-left: 0px;
@@ -261,10 +261,10 @@ body {
     font-weight: bold;
     font-family: "Courgette", cursive;
     font-size: 6.5vw;
-    width: 80%;
+    width: 90%;
 
     position: absolute;
-    left: 10%;
+    left: 5%;
     top: 50%;
     z-index: 1;
 }
@@ -368,7 +368,7 @@ body {
 }
 
 .part h1, .part p{
-    font-family: Lato, sans-serif;
+    font-family: "Times New Roman", sans-serif;
 }
 
 .part h1{
@@ -539,6 +539,7 @@ body {
     opacity: 50%;
     transform-origin: 50% 50%;
     transform: translate(-25%, 0%);
+    transition: 1.7s all ease;
 }
 
 .projectBubble .projectContent{
