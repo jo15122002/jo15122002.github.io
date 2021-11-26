@@ -298,21 +298,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Parts */
 
 .allParts{
@@ -498,7 +483,7 @@ body {
 }
 
 #french strong{
-    color: black;
+    mix-blend-mode: difference;
 }
 
 
@@ -572,6 +557,7 @@ body {
     height: 100vh;
     bottom: 0px;
     background-color: rgba(0,0,0, 0.8);
+    z-index: 6;
 }
 
 .projectFullscreen h6{

@@ -262,7 +262,7 @@ function Circlle(el, color) {
   if ($(el).attr('id') == "french") {
     $(el).circleProgress({ fill: { image: "./images/france-min.png" } })
       .on('circle-animation-progress', function (event, progress, stepValue) {
-        $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2) + '%');
+        $(this).find('strong').text(String((stepValue.toFixed(3)*100).toFixed(0)) + '%');
       });
   } else if($(el).attr('id') == "english") {
     $(el).circleProgress({ fill: { image: "./images/english-min.png" } })
