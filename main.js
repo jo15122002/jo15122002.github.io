@@ -49,7 +49,10 @@ const allParts = document.querySelector(".allParts");
 const form = document.querySelector("#Contact form"),
 statusTxt = form.querySelector(".button-area span");
 
+
+
 //CODE ===========================================================================================================
+window.scrollTo(0,0);
 typeWriter();
 backgroundBubbles(50);
 
