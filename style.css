@@ -511,8 +511,8 @@ body {
 
 .experienceCard .experienceImage{
     overflow: hidden;
-    width: 350px;
-    height: auto;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     transition: 0.5s ease all;
     margin-top: 4%;
@@ -522,10 +522,16 @@ body {
     transform: translate(-50%, 0%);
 }
 
+.experienceCard .experienceImage img{
+    transition: 1s ease all;
+    height: 100%;
+}
+
 .experienceCard h2{
     position: absolute;
     align-items: center;
     margin: auto;
+    transition: 0.5s all ease;
     /* centered */
     transform-origin: 50% 50%;
     margin-left: 50%;
@@ -541,11 +547,13 @@ body {
     transition: opacity 0.5s ease, margin 0.7s ease;
     /* centered */
     transform-origin: 50% 50%;
-    margin-left: 50%;
+    margin-left: 65%;
     transform: translate(-50%, 0%);
 }
 
 .experienceCard:hover .experienceImage{
+    height: 300px;
+    width: fit-content;
     border-radius: 0%;
     margin-left: 1%;
     margin-top: 1%;
@@ -555,6 +563,10 @@ body {
 .experienceCard:hover p{
     opacity: 100%;
     margin-top: 4%;
+}
+
+.experienceCard:hover h2{
+    margin-left: 65%;
 }
 
 
