@@ -41,15 +41,16 @@ const categoryContainers = document.querySelectorAll(".categoryContainer");
 const projectBubbles = document.querySelectorAll(".projectBubble");
 let projectBubbleOpened = false;
 
+///About me variables
+const hobbiesCards = document.querySelectorAll(".hobbyCard");
 
-///Other variables
-const allParts = document.querySelector(".allParts");
 
 ///Contact form variables
 const form = document.querySelector("#Contact form"),
 statusTxt = form.querySelector(".button-area span");
 
-
+///Other variables
+const allParts = document.querySelector(".allParts");
 
 //CODE ===========================================================================================================
 window.scrollTo(0,0);
@@ -187,7 +188,16 @@ categoryContainers.forEach(element => {
   observer.observe(element);
 });
 
-
+//Autoplay videos on hover
+hobbiesCards.forEach(element => {
+  element.addEventListener('mouseenter', (e) => {
+    e.target.querySelector("video").play()
+    }, false);
+  
+    element.addEventListener('mouseleave', (e) => {
+      e.target.querySelector("video").pause()
+    }, false);
+});
 
 
 
