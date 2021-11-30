@@ -437,7 +437,8 @@ body {
 }
 
 .educationDescription p{
-    font-size: medium;
+    text-align: center;
+    font-size: x-large;
 }
 
 /* Skill Part */
@@ -553,7 +554,7 @@ body {
 
 .experienceCard:hover .experienceImage{
     height: 300px;
-    width: fit-content;
+    width: max-content;
     border-radius: 0%;
     margin-left: 1%;
     margin-top: 1%;
