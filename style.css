@@ -267,7 +267,7 @@ body {
 
     position: absolute;
     left: 5%;
-    top: 50%;
+    top: 55%;
     z-index: 1;
 }
 
@@ -779,6 +779,8 @@ body {
     bottom: 0px;
     margin: auto;
     visibility: hidden;
+    text-decoration: none;
+    color: #ff5c5c;
 }
 
 .projectFullscreen .projectGithub{
