@@ -473,25 +473,18 @@
             <h1>Contact</h1>
 
             <h4>Send me a message :</h4>
-            <form action="#" class="form">
-            <div class="dbl-field">
-                <div class="field">
-                <input type="text" name="name" placeholder="Enter your name">
-                <i class='fas fa-user'></i>
-                </div>
-                <div class="field">
-                <input type="text" name="email" placeholder="Enter your email">
-                <i class='fas fa-envelope'></i>
-                </div>
-            </div>
-            <div class="message">
-                <textarea placeholder="Write your message" name="message"></textarea>
-            </div>
-            <div class="button-area">
-                <button type="submit">Disbaled for now</button>
-                <span></span>
-            </div>
-            </form>
+            <form method="POST" action="mailer.php">
+                Name<br />
+                <input type="text" name="name" size="30" value="" class="text-input" />
+                <br />
+                Email<br />
+                <input type="text" name="email" id="email" size="30" value="" class="text-input" />
+                <br />
+                Your Message<br />
+                <textarea cols="25" rows="8" name="message" class="text-input"></textarea>
+                <br />
+                <input type="submit" value="Send Email" name="submit" class="button" id="submit_btn">
+                </form>
             <h4>Find me elsewhere :</h4>
             <div class="socialMedia">
                 <a href="mailto:joyce.wagner@etu.univ-smb.fr"><i class="fas fa-envelope"></i></a>
