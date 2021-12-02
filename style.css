@@ -445,7 +445,8 @@ body {
 
 /* Skill Part */
 .categoryContainer p{
-    margin-bottom: 10px;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 #SkillsContainer{
