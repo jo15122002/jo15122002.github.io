@@ -29,7 +29,7 @@ const doubleArrowDown = document.querySelector("#double-arrow-down");
 const myName = document.querySelector("#myName");
 let menuDiv = null;
 const burgerMenuIcon = document.querySelector("#theRealMenuBurger");
-const eachMenuWanted = ["Download my cv", "About me", "My skills", "Experiences", "Projects", "References", "Contact"];
+const eachMenuWanted = ["Download my resume", "About me", "My skills", "Experiences", "Projects", "References", "Contact"];
 const eachMenuItems = [];
 let menuOpened = false;
 
