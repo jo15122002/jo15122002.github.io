@@ -423,7 +423,7 @@ body {
 
 .education .educationDescription{
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     transition: all 1s ease;
     opacity: 0%;
     width: 90%;
