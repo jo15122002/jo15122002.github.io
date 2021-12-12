@@ -93,7 +93,7 @@ burgerMenuIcon.addEventListener("click", () =>{
       let menuItemHref = c("a", menuItem, element);
 
       //Set href for each menu items
-      if (element == "Download my cv") {
+      if (element == "Download my resume") {
         menuItemHref.setAttribute('href', './assets/Cv_Joyce_WAGNER.pdf');
       } else {
         menuItemHref.setAttribute('href', '#'+element);
