@@ -1,0 +1,108 @@
+﻿ /*Le fond est rose*/
+ body{
+	  background-image: url("multicolore.jpeg");
+	  background-repeat: repeat;
+	  background-size: 100%;
+ }
+ 
+ /*Le paragraphe est rouge*/
+ p{
+	 color:white;
+	 font-size:14px;
+ }
+
+ /*Les liens seront blancs et en gras*/
+ a{
+	 color: white;
+	 font-weight: bold;
+ }
+ 
+ /*ici il y auras le surlignement (couleur a changer pour plus tard ^^)*/
+ .div-test{
+	 background-color: #88BB11;
+	 font-weight: bold;
+ }
+ 
+ /*ici nous allons utiliser le div qui sert à surlligner tout le bloc d'élément séléctionné
+ .surlign{
+	 background-color: #00FFFF;
+	 font-weight: bold;
+ }
+ */
+ 
+ /*Et la on utilise le span qui sert a surligner juste ce qu'on a séléctionné dans la ligne*/
+ .surligne{
+	 background-color: #FF00FF;
+ }
+ 
+ /*ici nous avons les ombres du texte*/
+ .h1{
+	 text-shadow: -4px 4px 4px black;
+	 position: relative;
+	 left: 50px;
+ }
+ 
+ /*La c'est les boites arrondie et c'est beau... :3*/
+ .div-rond{
+	 background-color: #269;
+	 width: 400px;
+	 border: 5px ridge #444;
+	 border-radius: 15px;
+	 border-color: red;
+	 box-shadow: -8px 8px 9px black;
+ }
+ 
+ .h2{
+	 background-color: #269;
+	 font-weight: bold;
+	 z-index:2;
+	 position: relative;
+	 top: 10px;
+	 left: 130px;
+	 border: 5px ridge #444;
+	 border-radius: 10px;
+	 border-color: black;
+ }
+ 
+ .h3{
+	 background-color: #270;
+	 width: 400px;
+	 border: 5px ridge #444;
+	 border-radius: 15px;
+	 border-color: black;
+	 z-index:1;
+	 position: relative;
+	 top: -25px;
+	 left:100px;
+ }
+ 
+  .degrade{
+    width: 200px;
+	height: 200px;
+    background: -webkit-radial-gradient(circle, white, yellow, orange, red);
+	background: -o-radial-gradient(circle, white, yellow, orange, red);
+	background: -moz-radial-gradient(circle, white, yellow, orange, red);
+	background: radial-gradient(circle, white, yellow, orange, red);
+	}
+	
+  .para1{
+    float:right;
+	}
+	
+  .doubleimage:hover{
+   opacity: 0.0;
+    }
+	
+  .doubleimage1{
+  width:1920px;
+  height:1086px;
+  position:absolute;
+  top:191px;
+  left;0px;
+   }
+   
+  .reprisehtml{
+   text-shadow: -4px 4px 4px black;
+   position: relative;
+   left: 50px
+  }
