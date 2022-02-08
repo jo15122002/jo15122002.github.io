@@ -12,7 +12,7 @@ const traits = [
   {text: "Persevering", color: "red"},
   {text: "A team Player", color: "blue"},
   {text: "Everything you need", color: "purple"},
-  {text: "Looking for an internship :)", color: "#CF7CA9"},
+  //{text: "Looking for an internship :)", color: "#CF7CA9"},
 ]
 
 ///Header variables
