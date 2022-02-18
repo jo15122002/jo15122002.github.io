@@ -10,7 +10,7 @@ const traits = [
   {text: "Curious", color: "yellow"},
   {text: "Autonomous", color: "orange"},
   {text: "Persevering", color: "red"},
-  {text: "A team Player", color: "blue"},
+  {text: "A team player", color: "blue"},
   {text: "Everything you need", color: "purple"},
   //{text: "Looking for an internship :)", color: "#CF7CA9"},
 ]
