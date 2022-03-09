@@ -684,6 +684,13 @@ body {
     margin-top: 3%;
 }
 
+.experienceCard a{
+    color: #ff5c5c;
+    text-decoration: none;
+}
+.experienceCard a:hover{
+    color: #9b0000;
+}
 
 
 /* Projects part */
