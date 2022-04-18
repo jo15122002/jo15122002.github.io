@@ -3,7 +3,6 @@
 const typer = document.getElementById("feature-text");
 let i = 0;
 let k = 0;
-let cursorPos = 0;
 
 const traits = [
   {text: "Happy", color: "green"},
@@ -21,6 +20,7 @@ const futureHeaderH1 = futureHeader.childNodes[1];
 
 ///Custom cursor variables
 const cursor = document.querySelector(".cursor");
+let cursorPos = 0;
 
 ///Double arrow variables
 const doubleArrowDown = document.querySelector("#double-arrow-down");
