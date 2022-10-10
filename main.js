@@ -54,6 +54,38 @@ const correctName = "Joyce WAGNER";
 let posesToDo = [];
 let curNamePos = 0;
 
+//WIP ============================================================================================================
+
+for(let i = 0; i < nameLenght; i++){
+  posesToDo.push(i);
+}
+
+console.log(posesToDo);
+
+setInterval(() => {
+  curNamePos = Math.floor(Math.random() * posesToDo.length);
+  let modified = "";
+  if(posesToDo.includes(curNamePos)){
+    console.log("curNamePos : " + curNamePos);
+    console.log("posesToDo : " + posesToDo);
+    if(Math.random() > 0.1){
+      modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
+    }else{
+      modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
+      posesToDo.splice(curNamePos, 1);
+    }
+    name.innerText = modified;
+  }
+}, 20);
+
+
+function generateRandomCharacter() {
+  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
+  return characters.charAt(Math.floor(Math.random() * characters.length));
+}
+
+//WIP ============================================================================================================
+
 //CODE ===========================================================================================================
 window.scrollTo(0,0);
 typeWriter();
@@ -200,12 +232,6 @@ hobbiesCards.forEach(element => {
     }, false);
 });
 
-function generateRandomCharacter() {
-  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  return characters.charAt(Math.floor(Math.random() * characters.length));
-}
-
-
 
 
 
@@ -316,35 +342,3 @@ function handler(entries, observer) {
     });
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//WIP ============================================================================================================
-
-for(let i = 0; i < nameLenght; i++){
-  posesToDo.push(i);
-}
-
-console.log(posesToDo);
-
-setInterval(() => {
-  curNamePos = Math.floor(Math.random() * posesToDo.length);
-  if(Math.random() > 0.1){
-    let modified = "";
-    modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
-  }else{
-    modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
-    posesDone.push(curNamePos);
-  }
-  name.innerText = modified;
-}, 20);
