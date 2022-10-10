@@ -47,11 +47,17 @@ const hobbiesCards = document.querySelectorAll(".hobbyCard");
 ///Other variables
 const allParts = document.querySelector(".allParts");
 
+///Random word variables
+const name = document.querySelector("#name");
+const nameLenght = name.innerText.length;
+const correctName = "Joyce WAGNER";
+let posesToDo = [];
+let curNamePos = 0;
+
 //CODE ===========================================================================================================
 window.scrollTo(0,0);
 typeWriter();
 backgroundBubbles(50);
-
 
 window.addEventListener("scroll", function(){
   if (scrollY <= window.innerHeight * 0.1) {//10% of the height
@@ -194,7 +200,10 @@ hobbiesCards.forEach(element => {
     }, false);
 });
 
-
+function generateRandomCharacter() {
+  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  return characters.charAt(Math.floor(Math.random() * characters.length));
+}
 
 
 
@@ -321,3 +330,21 @@ function handler(entries, observer) {
 
 
 //WIP ============================================================================================================
+
+for(let i = 0; i < nameLenght; i++){
+  posesToDo.push(i);
+}
+
+console.log(posesToDo);
+
+setInterval(() => {
+  curNamePos = Math.floor(Math.random() * posesToDo.length);
+  if(Math.random() > 0.1){
+    let modified = "";
+    modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
+  }else{
+    modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
+    posesDone.push(curNamePos);
+  }
+  name.innerText = modified;
+}, 20);
