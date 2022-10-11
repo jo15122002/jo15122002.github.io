@@ -71,7 +71,7 @@ function nameRandomizer(){
   //console.log("curNamePos : " + curNamePos);
   if(posesToDo.includes(curNamePos)){
     //console.log("posesToDo : " + posesToDo);
-    if(Math.random() > 0.05){
+    if(Math.random() > 0.1){
       modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
     }else{
       modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
