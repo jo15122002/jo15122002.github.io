@@ -53,12 +53,14 @@ const nameLenght = name.innerText.length;
 const correctName = "Joyce WAGNER";
 let posesToDo = [];
 let curNamePos = 0;
+let initialPosesToDoLenght = 0;
 
 //WIP ============================================================================================================
 function randomNameController(){
   for(let i = 0; i < nameLenght; i++){
     posesToDo.push(i);
   }
+  initialPosesToDoLenght = posesToDo.length;
   nameRandomizer();
 }
 
@@ -69,7 +71,7 @@ function nameRandomizer(){
   //console.log("curNamePos : " + curNamePos);
   if(posesToDo.includes(curNamePos)){
     //console.log("posesToDo : " + posesToDo);
-    if(Math.random() > 0.1){
+    if(Math.random() > 0.05){
       modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
     }else{
       modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
@@ -78,7 +80,9 @@ function nameRandomizer(){
     }
     name.innerText = modified;
   }
-  setTimeout(nameRandomizer, 500/((posesToDo.length**2)+1));
+  let delay = Math.abs(Math.log(initialPosesToDoLenght - posesToDo.length)) * 75;
+  console.log(delay);
+  setTimeout(nameRandomizer, delay);
 }
 
 function generateRandomCharacter() {
