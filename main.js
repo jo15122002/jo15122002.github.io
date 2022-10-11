@@ -55,29 +55,31 @@ let posesToDo = [];
 let curNamePos = 0;
 
 //WIP ============================================================================================================
-
-for(let i = 0; i < nameLenght; i++){
-  posesToDo.push(i);
+function randomNameController(){
+  for(let i = 0; i < nameLenght; i++){
+    posesToDo.push(i);
+  }
+  nameRandomizer();
 }
 
-console.log(posesToDo);
-
-setInterval(() => {
+function nameRandomizer(){
   curNamePos = Math.floor(Math.random() * posesToDo.length);
+  curNamePos = posesToDo[curNamePos];
   let modified = "";
+  //console.log("curNamePos : " + curNamePos);
   if(posesToDo.includes(curNamePos)){
-    console.log("curNamePos : " + curNamePos);
-    console.log("posesToDo : " + posesToDo);
+    //console.log("posesToDo : " + posesToDo);
     if(Math.random() > 0.1){
       modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
     }else{
       modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
-      posesToDo.splice(curNamePos, 1);
+      //console.log("posesToDo : " + posesToDo + " / curNamePos : " + curNamePos + " / posesToDo.findIndex(curNamePos) : " + posesToDo.indexOf(curNamePos));
+      posesToDo.splice(posesToDo.indexOf(curNamePos), 1);
     }
     name.innerText = modified;
   }
-}, 20);
-
+  setTimeout(nameRandomizer, 500/((posesToDo.length**2)+1));
+}
 
 function generateRandomCharacter() {
   let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
@@ -90,6 +92,7 @@ function generateRandomCharacter() {
 window.scrollTo(0,0);
 typeWriter();
 backgroundBubbles(50);
+randomNameController();
 
 window.addEventListener("scroll", function(){
   if (scrollY <= window.innerHeight * 0.1) {//10% of the height
