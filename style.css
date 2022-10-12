@@ -101,6 +101,11 @@ body {
     transition: ease 0.25s background-color;
 }
 
+#name:hover{
+    color: #ff5c5c;
+    transition: all 0.25s ease;
+}
+
 /* Menu */
 .bg-text-menu{
     z-index: 2;
