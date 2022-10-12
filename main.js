@@ -65,28 +65,29 @@ function randomNameController(){
 }
 
 function nameRandomizer(){
+  console.log(generateRandomCharacter());
   curNamePos = Math.floor(Math.random() * posesToDo.length);
   curNamePos = posesToDo[curNamePos];
   let modified = "";
-  //console.log("curNamePos : " + curNamePos);
   if(posesToDo.includes(curNamePos)){
-    //console.log("posesToDo : " + posesToDo);
+    //console.log(name.innerText.length)
     if(Math.random() > 0.1){
       modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
     }else{
+      //console.log(correctName[curNamePos])
       modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
-      //console.log("posesToDo : " + posesToDo + " / curNamePos : " + curNamePos + " / posesToDo.findIndex(curNamePos) : " + posesToDo.indexOf(curNamePos));
       posesToDo.splice(posesToDo.indexOf(curNamePos), 1);
     }
     name.innerText = modified;
   }
   let delay = Math.abs(Math.log(initialPosesToDoLenght - posesToDo.length)) * 75;
-  console.log(delay);
-  setTimeout(nameRandomizer, delay);
+  if(posesToDo.length){
+    setTimeout(nameRandomizer, delay);
+  }
 }
 
 function generateRandomCharacter() {
-  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
+  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789é&ç$£@ù*µ%§!^¨:;.,?/|\\";
   return characters.charAt(Math.floor(Math.random() * characters.length));
 }
 
