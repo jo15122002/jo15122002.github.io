@@ -65,16 +65,13 @@ function randomNameController(){
 }
 
 function nameRandomizer(){
-  console.log(generateRandomCharacter());
   curNamePos = Math.floor(Math.random() * posesToDo.length);
   curNamePos = posesToDo[curNamePos];
   let modified = "";
   if(posesToDo.includes(curNamePos)){
-    //console.log(name.innerText.length)
     if(Math.random() > 0.1){
       modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
     }else{
-      //console.log(correctName[curNamePos])
       modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
       posesToDo.splice(posesToDo.indexOf(curNamePos), 1);
     }
