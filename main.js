@@ -83,6 +83,11 @@ window.addEventListener("scroll", function(){
   }  
 });
 
+//Double arrow down click event
+doubleArrowDown.addEventListener("click", function(){
+  allParts.scrollIntoView({behavior: "smooth"});
+});
+
 //Custom Cursor
 document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.pageX - scrollX + 'px'
