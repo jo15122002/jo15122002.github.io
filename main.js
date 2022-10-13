@@ -88,6 +88,12 @@ function generateRandomCharacter() {
   return characters.charAt(Math.floor(Math.random() * characters.length));
 }
 
+name.addEventListener("mouseenter", () => {
+  if(!posesToDo.length){
+    randomNameController();
+  }
+});
+
 //WIP ============================================================================================================
 
 //CODE ===========================================================================================================
