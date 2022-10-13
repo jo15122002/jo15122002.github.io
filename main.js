@@ -56,43 +56,7 @@ let curNamePos = 0;
 let initialPosesToDoLenght = 0;
 
 //WIP ============================================================================================================
-function randomNameController(){
-  for(let i = 0; i < nameLenght; i++){
-    posesToDo.push(i);
-  }
-  initialPosesToDoLenght = posesToDo.length;
-  nameRandomizer();
-}
 
-function nameRandomizer(){
-  curNamePos = Math.floor(Math.random() * posesToDo.length);
-  curNamePos = posesToDo[curNamePos];
-  let modified = "";
-  if(posesToDo.includes(curNamePos)){
-    if(Math.random() > 0.1){
-      modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
-    }else{
-      modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
-      posesToDo.splice(posesToDo.indexOf(curNamePos), 1);
-    }
-    name.innerText = modified;
-  }
-  let delay = Math.abs(Math.log(initialPosesToDoLenght - posesToDo.length)) * 75;
-  if(posesToDo.length){
-    setTimeout(nameRandomizer, delay);
-  }
-}
-
-function generateRandomCharacter() {
-  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789é&ç$£@ù*µ%§!^¨:;.,?/|\\";
-  return characters.charAt(Math.floor(Math.random() * characters.length));
-}
-
-name.addEventListener("mouseenter", () => {
-  if(!posesToDo.length){
-    randomNameController();
-  }
-});
 
 //WIP ============================================================================================================
 
@@ -353,3 +317,42 @@ function handler(entries, observer) {
     });
   });
 }
+
+
+function randomNameController(){
+  for(let i = 0; i < nameLenght; i++){
+    posesToDo.push(i);
+  }
+  initialPosesToDoLenght = posesToDo.length;
+  nameRandomizer();
+}
+
+function nameRandomizer(){
+  curNamePos = Math.floor(Math.random() * posesToDo.length);
+  curNamePos = posesToDo[curNamePos];
+  let modified = "";
+  if(posesToDo.includes(curNamePos)){
+    if(Math.random() > 0.1){
+      modified = name.innerText.substr(0, curNamePos) + generateRandomCharacter() + name.innerText.substr(curNamePos+1);
+    }else{
+      modified = name.innerText.substr(0, curNamePos) + correctName[curNamePos] + name.innerText.substr(curNamePos+1);
+      posesToDo.splice(posesToDo.indexOf(curNamePos), 1);
+    }
+    name.innerText = modified;
+  }
+  let delay = Math.abs(Math.log(initialPosesToDoLenght - posesToDo.length)) * 75;
+  if(posesToDo.length){
+    setTimeout(nameRandomizer, delay);
+  }
+}
+
+function generateRandomCharacter() {
+  let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789é&ç$£@ù*µ%§!^¨:;.,?/|\\";
+  return characters.charAt(Math.floor(Math.random() * characters.length));
+}
+
+name.addEventListener("mouseenter", () => {
+  if(!posesToDo.length){
+    randomNameController();
+  }
+});
